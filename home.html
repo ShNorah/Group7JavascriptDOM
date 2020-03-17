@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link  rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="#home">DOM</a>
+        <a href="/pages/animation.html" target="_blank">HTML DOM and CSS DOM</a>
+        <a href="#">DOM Events</a>
+        <a href="#about">DOM Collections</a>
+    </div>
+      <div class="content">
+        <h1>DOM Methods, DOM Documents and DOM Elements</h1>
+        <div  id="intro">
+          <h2>Finding elements by id</h2>
+          <p>This example demonstrates <b>getElememntById </b>method</p>
+          <p class ="cats" id ="catslove"> Top 3 things cats love:
+          <ul>
+              <li>milk</li>
+              <li>cheese</li>
+              <li>rats</li>
+          </ul></p>
+          
+      <!--the getElementById method used id=cats to find the element-->     
+      <script>
+           var myElement = document.getElementById('catslove');
+           myElement.innerHTML ="World of cats!";
+      </script>
+       <!--the getElementByClassName method used id=cathate to find the element--> 
+          <h2>Finding HTML elements by class Name</h2>
+          <p>This example demonstrates <b>getElementByClassName </b>method</p>  
+       <p class ="cats" >Top three things cats hate:</p> 
+       <p id="catshate"></p>     
+       <p>
+          <ol>
+          <li>dogs</li>
+          <li>feeling lonely</li>
+          <li>dirty litter boxes</li>
+          </ol>
+      </p>
+      <script>
+           var x = document.getElementsByClassName('cats');
+           document.getElementById('catshate').innerHTML ="The second paragraph explains: " + x[1].innerHTML; 
+       </script>         
+  </div>
+      <div>
+        <form id ="cat-photo-form" action = "/submit-cat-photo">
+            <input type = "text" placeholder="Catphoto" required><br>
+            <button type="submit">Submit</button> <br>
+            <label  for = "indoor">
+                <input id ="indoor" type ="radio" value ="indoor"name="indoor-outdoor"checked>Indoor
+              </label>
+              <label for ="outdoor">
+                  <input id ="outdoor" type="radio" value ="outdoor" name="indoor-outdoor">Outdoor
+              </label><br>
+              <label for="loving">
+                  <input id="loving" value ="loving" type="checkbox" name="personality" checked> Loving</label>
+              <label for="caring"><input id="caring" value ="caring" type="checkbox" name="personality"> Caring</label>
+              <label for="kind"><input id="kind" value ="kind" type="checkbox" name="personality"> kind</label>
+        </form>
+      </div>
+        </div> 
+      </div>      
+</body>
+
+</html>

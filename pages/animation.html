@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #myContainer {
+          width: 600px;
+          height: 400px;
+          position: relative;
+          background: rgb(143, 143, 105);
+        }
+        #myAnimation {
+          width: 300px;
+          height: 100px;
+          position: absolute;
+          background-color:dodgerblue;
+          padding-left: 5px;
+        }
+    
+        
+        </style>
+</style>
+<body>
+    <!---->
+    <h1>DOM HTML, DOM CSS and DOM Animations</h1>
+    <p>The Document Object Model (DOM) connects web pages to scripts or programming 
+        languages by representing the structure of a document</p>
+<p>HTML DOM  allows JavaSrcipt to change the content of html elements</p>
+<h4>JavaScript can create dynamic HTML content:
+    And they are writed in the Script element as shown in the example below</h4>
+<!--using javascript to create dynamic content in a web page-->
+    <script>    
+        document.write(Date());
+    </script>
+<!--DOM CSS -->
+   <h1>DOM CSS</h1>
+    <h4>
+        To change the style of an HTML element, use this syntax:
+        <h5>document.getElementById(id).style.property = new style</h5> 
+    </h4>
+    <p id="teamdom">Hello World!</p>
+
+<script>
+document.getElementById("myTeam").style.color = "blue";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+ 
+
+<!--animation-->
+<h1>DOM ANIMATIONS</h1>
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation">
+    <h3>Team Dom we have been learning DOM</h3>
+    
+</div>
+</div>
+
+<script>
+    function myMove() {
+      var elem = document.getElementById("myAnimation");   
+      var pos = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (pos == 300) {
+          clearInterval(id);
+        } else {
+          pos++; 
+          elem.style.top = pos + 'px'; 
+          elem.style.left = pos + 'px'; 
+        }
+      }
+    }
+    </script>
+
+</body>
+</html>
