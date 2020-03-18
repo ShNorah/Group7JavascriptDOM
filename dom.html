@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="./styles/style.css">
+    <title>Dom</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="/index.html">DOM</a>
+        <a href="/animation.html" target="_blank">HTML DOM and CSS DOM</a>
+        <a href="/event.html">DOM Events</a>
+        <a href="/navigation.html">DOM Navigations</a>
+        <a href="/dom.html" target="_blank">DOM Collections</a>
+    </div>
+
+    <div class="content " style="height: 40px; width: auto; font-size: large; color: blue;">
+    <h2>Dom Nodes</h2>
+    <p>Welcome to the Dom</p>
+    <p>Fasten your seatbelts we going for a ride!!!</p>
+    <p>Click Button to Activate ride..</p>
+    <button onclick="myFunction()">Click Me</button>
+    <button onclick="">Try Me</button>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    </div>
+    <script>
+        function myFunction(){
+            var myNodelist = document.querySelectorAll("p");
+            var i;
+            for (i = 0; i< myNodelist.length;i++){
+                myNodelist[i].style.color = "red";
+            }
+        }
+    </script>
+    
+    <script>
+        var myNode =  document.querySelectorAll("p");
+        document.getElementById("demo").innerHTML = "There are " + myNode.length +" paragraphs";
+    </script>
+
+    <script>
+    var myCollection = document.getElementByTagName("p");
+    document.getElementById("demo2").innerHTML = "The Heading for our topic is: " + myCollection[1].innerHTML;
+</script>
+
+
+
+</body>
+</html>
