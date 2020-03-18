@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link  rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  
+    <div class="sidebar">
+        <a class="active" href="/index.html">DOM</a>
+        <a href="/animation.html">HTML DOM and CSS DOM</a>
+        <a href="/event.html">DOM Events</a>
+        <a href="/navigation.html">DOM Navigations</a>
+        <a href="/dom.html">DOM Collections</a>
+    </div>
+      <div class="content">
+        <h1>DOM Methods, DOM Documents and DOM Elements</h1>
+        
+          <!--the getElementById method -->          
+          <h2>Finding elements by id</h2>
+          <p>This example demonstrates <b>getElememntById </b>method</p>
+          <p class ="cats" id ="catslove"> Top 3 things cats love:
+          <ul>
+              <li>milk</li>
+              <li>cheese</li>
+              <li>rats</li>
+          </ul></p>
+                
+       <!--the getElementByClassName method --> 
+          <h2>Finding HTML elements by class Name</h2>
+          <p>This example demonstrates <b>getElementByClassName </b>method</p>  
+       <p class ="cats" >Top three things cats hate:</p> 
+       <p id="catshate"></p>     
+       <p>
+         <!--find elements by TagName-->
+         <h2>Finding HTML elements by TagName</h2>
+          <ol>
+          <li>dogs</li>
+          <li>feeling lonely</li>
+          <li>dirty litter boxes</li>
+          </ol>          
+      </p>
+            
+  </div>
+      <div>
+        <form id ="cat-photo-form" action = "/submit-cat-photo">
+            <input type = "text" placeholder="Catphoto" required><br>
+            <button type="submit">Submit</button> <br>
+            <label  for = "indoor">
+                <input id ="indoor" type ="radio" value ="indoor"name="indoor-outdoor"checked>Indoor
+              </label>
+              <label for ="outdoor">
+                  <input id ="outdoor" type="radio" value ="outdoor" name="indoor-outdoor">Outdoor
+              </label><br>
+              <label for="loving">
+                  <input id="loving" value ="loving" type="checkbox" name="personality" checked> Loving</label>
+              <label for="caring"><input id="caring" value ="caring" type="checkbox" name="personality"> Caring</label>
+              <label for="kind"><input id="kind" value ="kind" type="checkbox" name="personality"> kind</label>
+        </form>
+      </div>
+        </div> 
+      </div> 
+      <script type ="text/javascript" src="/scripts/scripts.js"></script>     
+</body>
+
+</html>
