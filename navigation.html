@@ -6,8 +6,8 @@
       var h2 = document.getElementById("demo1").innerHTML= "Happy Cats"
       //document.getElementById("demo2").innerHTML = document.getElementById("demo1").firstChild.nodeValue;
       //document.getElementById("demo2").innerHTML = document.getElementById("demo1").childNodes[0].nodeValue;
-      //to demonstrate DOM root nodes>alert(document.body.innerHTML);
-      //alert(document.documentElement.innerHTML);
+      //alert(document.body.innerHTML);
+      alert(document.documentElement.innerHTML);
       //to demonstrate noneName property>document.getElementById("demo1").innerHTML = document.getElementById("demo1").nodeName;
     </script>
     <head>
@@ -29,8 +29,8 @@
       //var h2 = document.getElementById("demo1").innerHTML= "Happy Cats"
       //document.getElementById("demo2").innerHTML = document.getElementById("demo1").firstChild.nodeValue;
       //document.getElementById("demo2").innerHTML = document.getElementById("demo1").childNodes[0].nodeValue;
-      //to demonstrate DOM root nodes>alert(document.body.innerHTML);
-      //alert(document.documentElement.innerHTML);
+      //alert(document.body.innerHTML);
+      alert(document.documentElement.innerHTML);
       //to demonstrate noneName property>document.getElementById("demo1").innerHTML = document.getElementById("demo1").nodeName;
     </script>
       
@@ -73,12 +73,12 @@
      //add text to the <p> element, create a text node first
     var node = document.createTextNode("This is new.");
     //append the text node to the <p> element
-    para.appendChild(node);
+    para.appendChild(para);
     //append the new element to an existing element
     var element = document.getElementById("demo3");
-    //element.appendChild(para);
+    element.appendChild(para);
     var child = document.getElementById("demo3");
-    //insertBefore>element.insertBefore(para,child);
+    element.insertBefore(para,child);
 ​
    /*  to remove> var parent = document.getElementById("demo3");
    var child = document.getElementById("p1");
